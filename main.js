@@ -4,22 +4,18 @@ $(document).ready(function() {
         //log all data
         console.log(data);
 
-        // ************CODE WORKS UNTIL HERE*****************
-        // NEED TO FIGURE OUT WHETHER FOREACH IS BETTER THAN FOR LOOP FOR BELOW, AND WHETHER ALL THE SUBSEQUENT CODE SHOULD BE INCLUDED IN THE LOOP
-
-
-        //create loop to iterate through each obj in array
-        data.forEach(populateGrid() => {
-            
-        });
 
         let table = document.getElementById('table');
 
-        populateGrid() {
+        //create loop to iterate through each obj in array
+        for (i=0; i<data.length; i++){
             //create new table row
-            let newRow = table.insertRow(1);
-        }
+            let newRow = table.insertRow(i+1);
+        }    
+        // ************CODE WORKS UNTIL HERE*****************
 
+
+        
         //grab name from obj and add to first td cell
         //grab description to add to second td cell
 
