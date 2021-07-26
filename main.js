@@ -32,8 +32,10 @@ $(document).ready(function() {
             // add location cells
             let lat = data[i].location[0];
             let long = data[i].location[1];
-            let cell3Text = document.createTextNode(`https://www.google.com/maps?q=${lat},${long}`);
-            cell3.appendChild(cell3Text);
+            // let cell3Text = document.createTextNode(`https://www.google.com/maps?q=${lat},${long}`);
+            // cell3.appendChild(cell3Text);
+            let locationLink = `https://www.google.com/maps?q=${lat},${long}`;
+            cell3.innerHTML = `<a href=${locationLink}>Check It Out on Google Maps</a>`;
 
         }    
         // ************CODE WORKS UNTIL HERE*****************
